@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Item8
   m_EditorClassIdentifier: Assembly-CSharp::Data.Item
   <Sprite>k__BackingField: {fileID: 21300000, guid: acf7c1a4be009aa4aac3c0f5bc583e09, type: 3}
-  <Weight>k__BackingField: 1
+  <Weight>k__BackingField: 40
   <Pity>k__BackingField: 200

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f26cec47b3d4f2cbb68565cb84ac805, type: 3}
   m_Name: ItemXd
   m_EditorClassIdentifier: Assembly-CSharp::Data.Item
-  <Sprite>k__BackingField: {fileID: 21300000, guid: acf7c1a4be009aa4aac3c0f5bc583e09, type: 3}
-  <Weight>k__BackingField: 1
-  <Pity>k__BackingField: 200
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 03db6a2055615e84fa711f41cc7e4ebe, type: 3}
+  <Weight>k__BackingField: 0.0001
+  <Pity>k__BackingField: 200000
