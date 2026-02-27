@@ -1,27 +1,47 @@
 using System;
 using System.Net;
 using System.Net.Sockets;
-using UnityEngine;
+using System.Threading.Tasks;
+using JetBrains.Annotations;
+using Utilities;
+using Utilities.Behaviour;
 
 namespace Network
 {
-    public class NetClient : MonoBehaviour
+    public sealed class NetClient : MonoSingleton<NetClient>
     {
         private TcpClient _client = new();
+        
+        #region Events
+
+        [CanBeNull] public event Action OnConnected;
+        [CanBeNull] public event Action<Exception> OnConnectionFailed;
+        [CanBeNull] public event Action OnDisconnected;
+
+        #endregion
+
+        #region Properties
 
         public NetworkStream Stream => _client?.GetStream();
         public bool Connected => _client.Connected;
+
+        #endregion
         
-        public async void Connect(IPAddress address, int port)
+        public async Task Connect(IPAddress address, int port)
         {
             try
             {
-                _client = new TcpClient(address.ToString(), port);
-                Debug.Log($"Connected to {address}:{port}");
+                if (Connected)
+                    return;
+
+                _client = new TcpClient();
+                
+                await _client.ConnectAsync(address, port);
+                OnConnected?.Invoke();
             }
             catch (Exception exception)
             {
-                Debug.Log(exception.Message);
+                OnConnectionFailed?.Invoke(exception);
             }
         }
         
@@ -31,7 +51,8 @@ namespace Network
                 return;
             
             _client.Close();
-            Debug.Log("Disconnected");
+            
+            OnDisconnected?.Invoke();
         }
     }
 }

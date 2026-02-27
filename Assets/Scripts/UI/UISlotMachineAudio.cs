@@ -62,7 +62,7 @@ namespace UI
             }
         }
 
-        private void HandleColumnStop(int columnIndex)
+        private void HandleColumnStop()
         {
             if (_stopSound)
                 _audioSource.PlayOneShot(_stopSound);
