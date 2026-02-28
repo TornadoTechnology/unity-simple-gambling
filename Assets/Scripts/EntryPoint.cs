@@ -11,7 +11,7 @@ public static class EntryPoint
         FastLog.Clear();
         FastLog.Log("Initialization....");
         
-        var singletons = AssetDatabase.LoadAssetAtPath<Singletons>(Config.SingletonsPath);
+        var singletons = Resources.Load<Singletons>(Config.SingletonsResourcesPath);
         if (singletons is null)
         {
             FastLog.Error($"Singletons not found, at path: {Config.SingletonsPath}");
