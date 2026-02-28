@@ -16,7 +16,8 @@ namespace UI
         {
             if (SpunAny)
                 yield break;
-            
+
+            Spun = true;
             OnSpinStart?.Invoke();
 
             var spinData = PrepareSpin(result);
@@ -31,6 +32,7 @@ namespace UI
             while (SpunAny)
                 yield return null;
 
+            Spun = false;
             OnSpinEnd?.Invoke();
         }
 

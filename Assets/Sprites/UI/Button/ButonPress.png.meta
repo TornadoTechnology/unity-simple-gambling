@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 1eb7c95140312204485012b627423d2b
+guid: e9eb07a269e646843bfa475d6f397e43
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6804447966182668273
-    second: "\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449-Sheet_0"
+      213: -3042775341902697147
+    second: Coin-Sheet_0
+  - first:
+      213: 71133711416741692
+    second: Coin-Sheet_1
+  - first:
+      213: 1342399075413277788
+    second: Coin-Sheet_2
+  - first:
+      213: 3010444492706396680
+    second: Coin-Sheet_3
+  - first:
+      213: -823459872431501727
+    second: Coin-Sheet_4
+  - first:
+      213: -4465660316191142228
+    second: Coin-Sheet_5
+  - first:
+      213: 4787151140641547685
+    second: Coin-Sheet_6
+  - first:
+      213: -2162809526079766169
+    second: Coin-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,8 +95,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -87,8 +108,8 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,8 +121,8 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,11 +134,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BorderGlow_0
+      name: ButonPress_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 242
+        y: 483
         width: 320
         height: 240
       alignment: 0
@@ -128,18 +149,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1fd689a5ac777546b7674ea1e85c73e
-      internalID: 1769694968
+      spriteID: 5b86ae7e38c335348b32b91cf3b8615c
+      internalID: 962254005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BorderGlow_1
+      name: ButonPress_1
       rect:
         serializedVersion: 2
         x: 320
-        y: 242
+        y: 483
         width: 320
         height: 240
       alignment: 0
@@ -150,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3220e3b59070a08408aaa22a02c0ebba
-      internalID: 41052126
+      spriteID: 148e82acf19af824f82e1846e681e8d3
+      internalID: 1737250063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BorderGlow_2
+      name: ButonPress_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
+        y: 243
         width: 320
         height: 240
       alignment: 0
@@ -172,18 +193,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50406a920e0e3a54e9c494b4d7b76de7
-      internalID: -1999150870
+      spriteID: e93f71b9d96726847aefbfc87ec5ab22
+      internalID: -1500696449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BorderGlow_3
+      name: ButonPress_3
       rect:
         serializedVersion: 2
         x: 320
-        y: 2
+        y: 243
         width: 320
         height: 240
       alignment: 0
@@ -194,8 +215,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3073b1d1da8f0346ada31682af85194
-      internalID: -1696742380
+      spriteID: 5734a5b02a5d7e9428b1ee17ff4c9448
+      internalID: -609740978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButonPress_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 320
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb444c9a823518d40b5cfb4c66819c01
+      internalID: -496104536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButonPress_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3
+        width: 320
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055497c2091f00e42b7bcf93f2ec701c
+      internalID: -615329627
       vertices: []
       indices: 
       edges: []
@@ -204,7 +269,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50cd2cad4314d06498e8b50510cf6041
+    spriteID: 3256b086bdd3cad42afcc1c363887104
     internalID: 0
     vertices: []
     indices: 
@@ -214,14 +279,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":240.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: True
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":320.0,"y":240.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BorderGlow_0: 1769694968
-      BorderGlow_1: 41052126
-      BorderGlow_2: -1999150870
-      BorderGlow_3: -1696742380
+      ButonPress_0: 962254005
+      ButonPress_1: 1737250063
+      ButonPress_2: -1500696449
+      ButonPress_3: -609740978
+      ButonPress_4: -496104536
+      ButonPress_5: -615329627
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

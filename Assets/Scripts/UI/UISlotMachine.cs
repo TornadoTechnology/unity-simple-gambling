@@ -40,6 +40,7 @@ namespace UI
   
         [field: Header("State (Do not change)")]
         [field: SerializeField] public bool Initialized { get; private set; }
+        [field: SerializeField] public bool Spun { get; private set; }
         [field: SerializeField] public Dictionary<RectTransform, bool> ContainerSpinning { get; private set; } = new(); // ONLY FOR DEBUG DON'T CHANGE
 
         #endregion

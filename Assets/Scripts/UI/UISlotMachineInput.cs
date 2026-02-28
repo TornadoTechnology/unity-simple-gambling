@@ -4,16 +4,18 @@ using UnityEngine.InputSystem;
 
 namespace UI
 {
-    [RequireComponent(typeof(UISlotMachine))]
+    [RequireComponent(typeof(UISlotMachine), typeof(UISlotMachineStarter))]
     public sealed class UISlotMachineInput : MonoBehaviour
     {
         [SerializeField] private InputActionReference _inputAction;
         
         private UISlotMachine _slotMachine;
+        private UISlotMachineStarter _slotMachineStarter;
 
         private void Awake()
         {
             _slotMachine = GetComponent<UISlotMachine>();
+            _slotMachineStarter = GetComponent<UISlotMachineStarter>();
         }
         
         private void OnEnable()
@@ -30,10 +32,10 @@ namespace UI
 
         private void OnScreenPressed(InputAction.CallbackContext obj)
         {
-            if (!_slotMachine.Initialized || _slotMachine.SpunAny)
+            if (!_slotMachine.Initialized || _slotMachine.Spun)
                 return;
             
-            _slotMachine.Spin(ItemsContainer.Instance.Pick()); 
+            _slotMachineStarter.StartSpin(ItemsContainer.Instance.Pick()); 
         }
     }
 }
