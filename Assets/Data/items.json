@@ -1,0 +1,100 @@
+﻿{
+  "Items": [
+    {
+      "Id": "Postcard",
+      "Name": "Открытка",
+      "SpritePath": "Sprites/Item8.png",
+      "Weight": "0.6",
+      "RankWeights": {
+        "Weak": "0.6",
+        "Medium": "0.5",
+        "Strong": "0.4"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Pin",
+      "Name": "Значёк",
+      "SpritePath": "Sprites/Item2.png",
+      "Weight": "0.12",
+      "RankWeights": {
+        "Weak": "0.12",
+        "Medium": "0.14",
+        "Strong": "0.15"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "StickerPack",
+      "Name": "Стикерпак",
+      "SpritePath": "Sprites/Item7.png",
+      "Weight": "0.12",
+      "RankWeights": {
+        "Weak": "0.12",
+        "Medium": "0.13",
+        "Strong": "0.15"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Poster",
+      "Name": "Постер",
+      "SpritePath": "Sprites/Item3.png",
+      "Weight": "0.12",
+      "RankWeights": {
+        "Weak": "0.12",
+        "Medium": "0.13",
+        "Strong": "0.15"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Keychain",
+      "Name": "Брелок",
+      "SpritePath": "Sprites/Item1.png",
+      "Weight": "0.02",
+      "RankWeights": {
+        "Weak": "0.02",
+        "Medium": "0.04",
+        "Strong": "0.05"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Notebook",
+      "Name": "Блокнот",
+      "SpritePath": "Sprites/Item5.png",
+      "Weight": "0.01",
+      "RankWeights": {
+        "Weak": "0.01",
+        "Medium": "0.03",
+        "Strong": "0.05"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Mug",
+      "Name": "Кружка",
+      "SpritePath": "Sprites/Item4.png",
+      "Weight": "0",
+      "RankWeights": {
+        "Weak": "0",
+        "Medium": "0.02",
+        "Strong": "0.03"
+      },
+      "Pity": "200"
+    },
+    {
+      "Id": "Zine",
+      "Name": "Зин",
+      "SpritePath": "Sprites/Item6.png",
+      "Weight": "0",
+      "RankWeights": {
+        "Weak": "0",
+        "Medium": "0.01",
+        "Strong": "0.02"
+      },
+      "Pity": "200"
+    }
+  ]
+}

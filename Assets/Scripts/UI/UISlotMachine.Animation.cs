@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Data.Items;
+using Data.Objects.Items;
 using UnityEngine;
 
 namespace UI
@@ -33,7 +33,7 @@ namespace UI
                 yield return null;
 
             Spun = false;
-            OnSpinEnd?.Invoke();
+            OnSpinEnd?.Invoke(result);
         }
 
         private void SpinColumn(RectTransform container, SpinData data)

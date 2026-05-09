@@ -1,7 +1,9 @@
 ﻿using Data;
-using UnityEditor;
+using Data.Objects;
 using UnityEngine;
 using Utilities;
+
+using UnityResources = UnityEngine.Resources;
 
 public static class EntryPoint
 {
@@ -11,7 +13,13 @@ public static class EntryPoint
         FastLog.Clear();
         FastLog.Log("Initialization....");
         
-        var singletons = Resources.Load<Singletons>(Config.SingletonsResourcesPath);
+        LoadSingletons();
+        LoadResources();
+    }
+    
+    private static void LoadSingletons()
+    {
+        var singletons = UnityResources.Load<Singletons>(Config.SingletonsResourcesPath);
         if (singletons is null)
         {
             FastLog.Error($"Singletons not found, at path: {Config.SingletonsPath}");
@@ -21,9 +29,14 @@ public static class EntryPoint
         foreach (var prefab in singletons.Prefabs)
         {
             Object.Instantiate(prefab);
-            
             FastLog.Log($"Singleton: {prefab.name}");
         }
+    }
+
+    private static void LoadResources()
+    {
+        ResourceContainer.Load();
+        ResourceGameContainer.Load();
     }
 }
 

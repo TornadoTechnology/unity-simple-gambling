@@ -1,9 +1,11 @@
 ﻿using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 namespace Utilities
 {
-    public class FastLog
+    [SuppressMessage("ReSharper", "Unity.PerformanceCriticalCodeInvocation")]
+    public static class FastLog
     {
         [Conditional("LOG_ENABLED"), Conditional("UNITY_EDITOR")]
         public static void Log(object message)

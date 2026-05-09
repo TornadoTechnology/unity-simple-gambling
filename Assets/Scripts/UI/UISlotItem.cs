@@ -1,4 +1,4 @@
-﻿using Data.Items;
+﻿using Data.Objects.Items;
 using UnityEngine;
 using UnityEngine.UI;
 

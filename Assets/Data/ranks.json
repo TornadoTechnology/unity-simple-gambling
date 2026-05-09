@@ -1,0 +1,19 @@
+﻿{
+  "Ranks": [
+    {
+      "Id": "Weak",
+      "Min": 0,
+      "Max": 34
+    },
+    {
+      "Id": "Medium",
+      "Min": 35,
+      "Max": 59
+    },
+    {
+      "Id": "Strong",
+      "Min": 60,
+      "Max": 999999
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Items;
+using Data.Objects.Items;
 using UnityEngine;
 
 using Random = UnityEngine.Random;
@@ -11,11 +11,11 @@ namespace UI
     {
         private readonly Dictionary<RectTransform, List<UISlotItem>> _itemInstances = new();
         
-        private void SetupContainers(IReadOnlyList<ItemEntry> entries)
+        private void SetupContainers(IReadOnlyList<Item> items)
         {
             foreach (var container in _containers)
             {
-                _itemInstances[container] = SetupContainer(container, entries, out var height);
+                _itemInstances[container] = SetupContainer(container, items, out var height);
                 
                 container.anchorMin = new Vector2(0.5f, 0.5f);
                 container.anchorMax = new Vector2(0.5f, 0.5f);
@@ -24,14 +24,14 @@ namespace UI
             }
         }
         
-        private List<UISlotItem> SetupContainer(RectTransform container, IReadOnlyList<ItemEntry> entries, out float height)
+        private List<UISlotItem> SetupContainer(RectTransform container, IReadOnlyList<Item> items, out float height)
         {
             height = 0f;
             
             var result = new List<UISlotItem>();
             var count = 0;
 
-            var entriesCopy = new List<ItemEntry>(entries);
+            var entriesCopy = new List<Item>(items);
             Shuffle(entriesCopy);
             
             // Add all type items
@@ -43,19 +43,19 @@ namespace UI
             
             for (; count < _containerItems; count++)
             {
-                CreatePrefab(entries[Random.Range(0, entries.Count)], ref height);
+                CreatePrefab(items[Random.Range(0, items.Count)], ref height);
             }
 
             return result;
 
-            void CreatePrefab(ItemEntry entry, ref float height)
+            void CreatePrefab(Item item, ref float height)
             {
                 var itemPrefab = SetupItemPrefab(container);
 
-                itemPrefab.Init(entry.Item);
+                itemPrefab.Init(item);
                 
                 itemPrefab.Image.rectTransform.anchoredPosition = Vector2.down * count * itemPrefab.Height;
-                itemPrefab.Image.sprite = entry.Item.Sprite;
+                itemPrefab.Image.sprite = item.Sprite;
                 
                 height += itemPrefab.Height;
                 result.Add(itemPrefab);

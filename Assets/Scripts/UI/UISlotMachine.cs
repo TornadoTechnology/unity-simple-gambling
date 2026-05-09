@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Data.Items;
-using Items;
+using Data;
+using Data.Objects.Items;
 using JetBrains.Annotations;
 using UnityEngine;
 using Utilities;
@@ -17,7 +17,7 @@ namespace UI
         #region Events
 
         public event Action OnSpinStart;
-        public event Action OnSpinEnd;
+        public event Action<Item> OnSpinEnd;
         public event Action OnColumnStart;
         public event Action OnColumnStop;
 
@@ -51,16 +51,15 @@ namespace UI
 
         private void Awake()
         {
-            // TODO: Separate module
-            Initialize(ItemsContainer.Instance.Items);
+            Initialize(ResourceContainer.Items);
         }
-        
-        public void Initialize(IReadOnlyList<ItemEntry> entries)
+
+        private void Initialize(IReadOnlyList<Item> items)
         {
             if (Initialized)
                 return;
             
-            SetupContainers(entries);
+            SetupContainers(items);
             Initialized = true;
         }
 

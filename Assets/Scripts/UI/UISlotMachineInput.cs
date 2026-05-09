@@ -1,4 +1,4 @@
-using Items;
+using Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,7 +35,7 @@ namespace UI
             if (!_slotMachine.Initialized || _slotMachine.Spun)
                 return;
             
-            _slotMachineStarter.StartSpin(ItemsContainer.Instance.Pick()); 
+            _slotMachineStarter.StartSpin(); 
         }
     }
 }
